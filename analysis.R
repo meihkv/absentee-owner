@@ -16,8 +16,6 @@ data = data %>%
          ) %>% 
   mutate(address_probs = levenshteinSim(mailing_compare, Property.Address))
 
-parcel_list = read.csv(file.choose())
-
 split = melt(str_split(trimws(data$Owner.Name),
                        pattern = '[\\s+\\\\/]'))
 
