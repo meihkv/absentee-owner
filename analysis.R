@@ -7,7 +7,7 @@ library(scales)
 library(plotly)
 library(ggplot2)
 
-data = read.csv(file.choose()) %>% 
+data = data %>% 
   mutate(mailing_compare = 
            trimws(paste(str_replace_all(Mailing.Address1, regex('\\s+UNIT', ignore_case = TRUE), ''),
                         Mailing.Address.City,
